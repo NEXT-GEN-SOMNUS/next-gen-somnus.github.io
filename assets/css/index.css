@@ -1,0 +1,9 @@
+.carousel-img {
+  filter: brightness(55%);
+  transition: all .5s;
+}
+
+.carousel-img:hover {
+  filter: brightness(100%);
+  transform: scale(1.1);
+}

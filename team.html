@@ -1,0 +1,29 @@
+---
+title: Our team
+description:
+css: /assets/css/team.css
+---
+
+<h3 class="text-center"> {{ page.description }} </h3></br>
+
+<div class="row row-cols-1 row-cols-md-3">
+  
+  {% for person in site.team %}
+  <div class="p-2 d-flex align-items-stretch">
+    <div class="card member">
+      <a href="{{ person.url }}">
+
+        <img src="{{ person.image_path }}" class="card-img-top" alt="{{ person.name }}" >
+
+        <div class="card-body">
+          <h5 class="card-title">{{ person.name }}</h5>
+          <p class="card-text">{{ person.position }}</p>
+          <p class="card-text" style="font-size:80%;">{{ person.specialization }}<p>
+        </div>
+      </a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% include back-button.html %}

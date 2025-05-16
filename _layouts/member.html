@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="/assets/css/member.css">
+
+<div class="row">
+  <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
+    <div class="row">
+      <div class="col-4">
+        <img class="profile" src="{{ page.image_path }}" alt="{{ page.name }}">
+      </div>
+      <div class="col-8">
+        <div class="row">
+          <h1>{{ page.name }}</h1>
+        </div>
+        <div class="row">
+          <h3>{{ page.position }}</h3>
+        </div>
+        <div class="row">
+          <p>{{ page.specialization }}</p>
+        </div>
+      </div>
+    </div>
+    
+    {{ content }}
+
+    {% include back-button.html %}
+  </div>
+</div>

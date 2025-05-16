@@ -1,0 +1,10 @@
+---
+layout: wp
+number: 5
+name: Explainability
+description: Integrate explainability into ML models using self-attention mechanisms, visualizing attention over PSG signals, and incorporating model-agnostic methods.
+---
+
+Explainability is one of the most important parts of any machine learning design today. The problem with deep learning is that the developed models are mostly opaque, easily hampering incorporation of explainability techniques. Using self-attention mechanisms call allow us to include model-specific explainability capabilities. This is so because self-attention learns a representation by relating elements at different positions along the input sequence. The underlying idea is that attention scores can be used to expand interpretability of the model by mapping them back to the input signals, enabling the model to show how it adjusts its focus according to the surrounding context. This idea would allow us to identify which signals, and the specific intervals within them, the model is paying “attention” to, when producing its outputs. 
+
+In this regard, we aim to produce a visual representation by coloring the specific signal intervals with an intensity proportional to their associated attention scores, therefore providing the clinician with valuable and intuitive feedback about how the model is scoring the PSG. In this project, we intend also to include model-agnostic explainability models, that is, they are independent of the ML model used, among which the best- known today are LIME (Local Interpretable Model-Agnostic Explanations) and SHAP (SHapley Additive exPlanations). Finally, this explainability is intended to be improved with HITL techniques. Specifically, the aim is that human experts review the explainability of the model and give it a numerical value according to its quality. This numerical value can then be used as input to a Bayesian optimization process to adjust the hyperparameters of the model to obtain better explanations without affecting its accuracy.

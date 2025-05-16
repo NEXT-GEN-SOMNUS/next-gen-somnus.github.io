@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="row">
+  <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
+    <div class="row mb-4 text-center" style="justify-content: center">
+      <h1>
+        WP{{ page.number }}: {{ page.name }}
+      </h1>
+    </div>
+    
+    <div class="row">
+      <div class="blog-post">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include back-button.html %}
+
+  </div>
+</div>

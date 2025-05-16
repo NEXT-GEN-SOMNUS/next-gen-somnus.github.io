@@ -1,0 +1,13 @@
+# NEXT-GEN-SOMNUS's site
+
+This is the repo for [NEXT-GEN-SOMNUS's site](https://next-gen-somnus.github.io)
+
+## About
+
+The analysis of polysomnography (PSG), the standard test for the diagnosis of sleep disorders, constitutes one of the most time-consuming tasks in the daily work of a sleep center.
+
+A typical PSG examination contains somewhere between six up to twenty-four hours of continuous neurophysiological activity recording, subject to subsequent visual scoring by clinical experts. Furthermore, a clinician’s time is expensive and scant, and the large amount of data and their complexity makes PSG analysis a task prone to errors and to subjective interpretations.
+
+The use of semi or automatic PSG scoring presents potential advantages. First, by supporting clinicians in the analysis, great savings in scoring time can be achieved, reducing diagnostic costs. In addition, has the interesting property of providing deterministic (repeatable) outcomes. However, despite several early attempts and abundant scientific literature, the problem remains unsolved, and practical acceptance of automatic PSG analysis among the clinical community remains low.
+
+The main objective of this project is to provide a comprehensive solution for the automated analysis of PSGs in sleep medicine using next generation machine learning techniques.

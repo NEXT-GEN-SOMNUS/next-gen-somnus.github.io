@@ -1,0 +1,12 @@
+---
+layout: wp
+number: 3
+name: Human-in-the-loop approach
+description: Human-in-the-loop strategies, including Curriculum Learning, Active Learning, and Interactive Machine Learning, to enhance model training through expert feedback and dynamic data selection based on case difficulty.
+---
+
+This WP is about developing different HITL approaches to improve the performance of the model using feedback from experts in the field in various ways: Curriculum Learning (CL), basically consists in organizing the dataset by difficulty, feeding the model first with the simplest cases and then with the more complex ones. 
+
+Here we have to implement two elements: a difficulty measurer that decides what kind of training data is considered easier than other data and, in our case, we have considered using domain experts who will label the different cases independently, which not only allows us to analyze the inter-expert agreement, but also to use the disagreements as a measure of the difficulty of each case. The second element is a training scheduler, that decides the sequence of data subsets throughout the training process based on the difficulty levels identified by the difficulty measurer. 
+
+The next HITL technique we intend to use is active learning (AL). This technique has been frequently used in domains where data labeling is expensive, and polysomnography analysis is one of them. The idea is that the system asks the human which cases would be more interesting for them to label, following either an exploitation strategy (confirming the patterns it has been able to generalize) or an exploration strategy (trying to generalize new patterns). This project proposes to go beyond a classic AL scheme, trying to have a more fluid communication process between the model and the experts, allowing the experts to act not only as oracles labeling new cases, but also to correct model solutions that are considered erroneous. This is an approach closer to Interactive Machine Learning (IML), where the model asks for feedback from the experts, but the experts have the ability to give feedback even if the system has not requested it. All these processes will be carried out in parallel with the previous WP, trying to integrate the results of both into a single ML model.
