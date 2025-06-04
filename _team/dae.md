@@ -1,8 +1,9 @@
 ---
 layout: member
 name: Diego Álvarez Estévez
-position: Research team
-specialization: Attention mechanisms, biomedical engineering  
+position: Principal Investigator
+specialization: (Quantum) Machine Learning, Biomedical Engineering  
 image_path: /assets/img/team/diego.png
 bio:
 ---
+Link to [personal website](https://www.dalvarezestevez.com/)
