@@ -17,12 +17,12 @@
 
   {%- if network[0] == "email" -%}
   <li class="list-inline-item">
-    <a href="mailto:{{ network[1] }}" title="Email me">
+    <a href="mailto:{{ network[1] }}" title="Email">
       <span class="fa-stack fa-lg" aria-hidden="true">
         <i class="fas fa-circle fa-stack-2x"></i>
         <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
       </span>
-      <span class="sr-only">Email me</span>
+      <span class="sr-only">Email</span>
    </a>
   </li>
   {%- endif -%}
@@ -32,7 +32,9 @@
     <a href="{{ network[1] }}" title="Zenodo">
       <span class="fa-stack fa-lg" aria-hidden="true">
         <i class="fas fa-circle fa-stack-2x"></i>
-        <i class="fas fa-folder fa-stack-1x fa-inverse"></i>
+        <i class="fas fa-stack-2x">
+          <img src="https://about.zenodo.org/static/img/icons/zenodo-icon-white.svg" style="width: 0.6em; margin-top: -0.1em;">
+        </i>
       </span>
       <span class="sr-only">Zenodo</span>
    </a>
