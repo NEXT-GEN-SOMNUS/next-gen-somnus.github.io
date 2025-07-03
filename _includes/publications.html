@@ -1,0 +1,86 @@
+<div class="col justify-content-center">
+  
+  {% if page.number != null %}
+    {% assign filtered_pubs = site.publications | where: 'wp', page.number %}
+    {% if filtered_pubs != empty %}
+      <div class="row mb-4 text-center" style="justify-content: center">
+        <h2>
+          Publications
+        </h2>
+      </div>
+      {% endif %}
+  {% else %}
+    {% assign filtered_pubs = site.publications %}
+  {% endif %}
+    
+    {% assign pubs_by_year = filtered_pubs | reverse | group_by_exp: "post", "post.date | date: '%Y'" %}
+    
+    {% for filtered in pubs_by_year %}
+    
+    <div class="row mb-4 text-center" style="justify-content: center">
+      <h3> {{ filtered.name }} </h3>
+    </div>
+
+    {% for pub in filtered.items %}
+
+      <div class="p-2 d-flex align-items-stretch">
+        <div class="card mb-5" style="width: 900px;">
+            <div class="card-body">
+                <h5 class="card-title">{{ pub.title }}</h5>
+                <p class="card-subtitle">{{ pub.author }}</p>
+                <p class="card-text">{{ pub.description }}</p>
+                <ul class="list-inline text-center footer-links">
+                    {% if page.number == null  and pub.wp != null %}
+                      <li class="list-inline-item">
+                        <a href="../wps/wp{{ pub.wp }}" title="Work Package {{ pub.wp }}">
+                          <span class="fa-stack fa-lg" aria-hidden="true">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fas fa-{{ pub.wp }} fa-stack-1x fa-inverse"></i>
+                          </span>
+                          <span class="sr-only">Work Package {{ pub.wp }}</span>
+                        </a>
+                      </li>
+                    {% endif %}
+                    {% if pub.doi != null %}
+                      <li class="list-inline-item">
+                        <a href="https://doi.org/{{ pub.doi }}" title="Publication" target="_blank">
+                          <span class="fa-stack fa-lg" aria-hidden="true">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fas fa-file-lines fa-stack-1x fa-inverse"></i>
+                          </span>
+                          <span class="sr-only">Publication</span>
+                        </a>
+                      </li>
+                    {% endif %}
+                    {% if pub.github != null %}
+                      <li class="list-inline-item">
+                        <a href="https://{{ pub.github }}" title="GitHub" target="_blank">
+                        <span class="fa-stack fa-lg" aria-hidden="true">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span class="sr-only">GitHub</span>
+                    </a>
+                    </li>
+                    {% endif %}
+                    {% if pub.corresponding != null %}
+                    <li class="list-inline-item">
+                        <a href="mailto:{{ pub.corresponding }}" title="Email" target="_blank">
+                        <span class="fa-stack fa-lg" aria-hidden="true">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span class="sr-only">Email</span>
+                    </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+      </div>
+
+    {% endfor %}
+
+  {% endfor %}
+
+</div>

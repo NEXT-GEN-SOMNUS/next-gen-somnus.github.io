@@ -37,6 +37,7 @@ navbar-links:
   Work Packages: "wps"
   Team: "team"
   News: "news"
+  Publications: "publications"
   # GitHub: "https://github.com/ngs-test-org"
 
 ################
@@ -63,6 +64,8 @@ collections:
     output: true
   wps:
     output: true
+  publications:
+    output: false
 
 #####################################
 # --- Footer social media links --- #
