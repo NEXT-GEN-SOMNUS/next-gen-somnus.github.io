@@ -2,7 +2,7 @@
 layout: member
 name: David Vázquez Lema
 position: Work team
-specialization: Attention mechanisms, human-in-the-loop  
+specialization: Attention Mechanisms, Human-In-The-Loop  
 image_path: /assets/img/thumb.png
 bio:
 ---

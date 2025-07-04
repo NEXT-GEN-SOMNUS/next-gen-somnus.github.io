@@ -2,7 +2,7 @@
 layout: member
 name: Samuel Magaz Romero
 position: Work team
-specialization: Quantum computing
+specialization: Quantum Computing
 image_path: /assets/img/team/samuel.jpg
 bio:
 ---
