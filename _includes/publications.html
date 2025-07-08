@@ -26,22 +26,29 @@
       <div class="p-2 d-flex align-items-stretch">
         <div class="card mb-5">
             <div class="card-body">
-                <h5 class="card-title">{{ pub.title }}</h5>
-                <p class="card-subtitle" style="opacity: 50%;margin-bottom: 0.5em;">[Type] Name</p>
-                <p class="card-subtitle">{{ pub.author }}</p>
-                <p class="card-text">{{ pub.description }}</p>
-                <ul class="list-inline text-center footer-links">
-                    {% if page.number == null  and pub.wp != null %}
-                      <li class="list-inline-item">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title">{{ pub.title }}</h5>
+                  <p class="card-subtitle" style="opacity: 50%;margin-bottom: 0.5em;">[{{ pub.type }}] {{ pub.publication_site }}</p>
+                  <p class="card-subtitle">{{ pub.author }}</p>
+                </div>
+                <div class="col-2 text-center">
+                  {% if page.number == null  and pub.wp != null %}
+                  <li class="list-inline-item">
                         <a href="../wps/wp{{ pub.wp }}" title="Work Package {{ pub.wp }}">
-                          <span class="fa-stack fa-lg" aria-hidden="true">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fas fa-{{ pub.wp }} fa-stack-1x fa-inverse"></i>
+                          <span class="badge badge-pill p-3" style="background-color: currentColor;" aria-hidden="true">
+                            <i class="fas fa-w fa-inverse"></i>
+                            <i class="fas fa-p fa-inverse"></i>
+                            <i class="fas fa-{{ pub.wp }} fa-inverse"></i>
                           </span>
                           <span class="sr-only">Work Package {{ pub.wp }}</span>
                         </a>
                       </li>
                     {% endif %}
+                </div>
+              </div>
+                <p class="card-text">{{ pub.description }}</p>
+                <ul class="list-inline text-center footer-links">
                     {% if pub.doi != null %}
                       <li class="list-inline-item">
                         <a href="https://doi.org/{{ pub.doi }}" title="Publication" target="_blank">
@@ -74,6 +81,21 @@
                         <span class="sr-only">Email</span>
                     </a>
                     </li>
+                    {% endif %}
+                  {% if page.number == null  and pub.wp != null %}
+                  <li class="list-inline-item mr-3 ml-1">
+                    |
+                  </li>
+                  <li class="list-inline-item">
+                        <a href="../wps/wp{{ pub.wp }}" title="Work Package {{ pub.wp }}">
+                          <span class="badge badge-pill p-3" style="background-color: currentColor;" aria-hidden="true">
+                            <i class="fas fa-w fa-inverse"></i>
+                            <i class="fas fa-p fa-inverse"></i>
+                            <i class="fas fa-{{ pub.wp }} fa-inverse"></i>
+                          </span>
+                          <span class="sr-only">Work Package {{ pub.wp }}</span>
+                        </a>
+                      </li>
                     {% endif %}
                 </ul>
             </div>

@@ -3,6 +3,8 @@ title:
 author: 
 description: 
 wp:
+type:
+publication_site:
 doi:
 github:
 ---
