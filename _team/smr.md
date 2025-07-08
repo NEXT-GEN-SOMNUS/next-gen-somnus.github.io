@@ -4,7 +4,7 @@ name: Samuel Magaz Romero
 position: Work team
 specialization: Quantum Computing
 image_path: /assets/img/team/samuel.jpg
-bio:
+email: s.magazr@udc.es
 ---
 
 Samuel Magaz Romero received his BSc in Computer Science and his MSc in Software Engineering from Universidade da Coruña in 2020 and 2022 respectively. Currently, he is a PhD student under the direction of Vicente Moret Bonillo and Eduardo Mosqueira Rey. His thesis involves researching the capabilities of Quantum Computing for the management of uncertainty in Artificial Intelligence systems. 

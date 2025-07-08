@@ -61,7 +61,7 @@ title-img: "/assets/img/logo-512x512.png"
 
 collections:
   team:
-    output: true
+    output: false
   wps:
     output: true
   publications:

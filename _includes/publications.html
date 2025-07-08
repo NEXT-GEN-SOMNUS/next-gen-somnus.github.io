@@ -24,9 +24,10 @@
     {% for pub in filtered.items %}
 
       <div class="p-2 d-flex align-items-stretch">
-        <div class="card mb-5" style="width: 900px;">
+        <div class="card mb-5">
             <div class="card-body">
                 <h5 class="card-title">{{ pub.title }}</h5>
+                <p class="card-subtitle" style="opacity: 50%;margin-bottom: 0.5em;">[Type] Name</p>
                 <p class="card-subtitle">{{ pub.author }}</p>
                 <p class="card-text">{{ pub.description }}</p>
                 <ul class="list-inline text-center footer-links">
