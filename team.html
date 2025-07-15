@@ -1,5 +1,6 @@
 ---
 title: Our team
+css: /assets/css/team.css
 ---
 
 <h3 class="text-center"> {{ page.description }} </h3></br>
@@ -8,44 +9,38 @@ title: Our team
   
   {% for member in site.team %}
 
-  <div class="p-2 d-flex align-items-stretch">
-    <div class="card mb-2" style="width: 50em;">
-      <div class="row no-gutters">
-          <div class="col-md-3">
-            <img src="{{ member.image_path }}" class="card-img" alt="{{ member.name }}" style="width:200px;height:200px;">
-          </div>
-          <div class="col-md-9">
-            <div class="card-body">
-              <h5 class="card-title">{{ member.name }}</h5>
-              <h5 class="card-title" style="font-size: 75%;">{{ member.position }}</h5>
-              <p style="margin: 1em 0em;">{{ member.specialization }}</p>
-              <ul class="list-inline" style="padding: 0em; margin: 0em;">
-                {% if member.email != null %}
-                <li class="list-inline-item">
-                  <a href="mailto:{{ member.email }}" title="Email" target="_blank">
-                    <span class="fa-stack fa-lg" aria-hidden="true">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <span class="sr-only">Email</span>
-                  </a>
-                </li>
-                {% endif %}
-                {% if member.web != null %}
-                <li class="list-inline-item">
-                  <a href="{{ member.web }}" title="Web" target="_blank">
-                    <span class="fa-stack fa-lg" aria-hidden="true">
-                        <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fas fa-circle-user fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <span class="sr-only">Web</span>
-                  </a>
-                </li>
-                {% endif %}
-              </ul>
-            </div>
-          </div>
-        </div>
+  <div class="">
+    <div class="card member-card m-2">
+      <img src="{{ member.image_path }}" class="card-img-top" alt="{{ member.name }}">
+      <div class="card-body">
+        <h5 class="card-title member-name">{{ member.name }}</h5>
+        <h5 class="card-title member-position">{{ member.position }}</h5>
+        <ul class="list-inline member-socials">
+          {% if member.email != null %}
+          <li class="list-inline-item">
+            <a href="mailto:{{ member.email }}" title="Email" target="_blank">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Email</span>
+            </a>
+          </li>
+          {% endif %}
+          {% if member.web != null %}
+          <li class="list-inline-item">
+            <a href="{{ member.web }}" title="Web" target="_blank">
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fas fa-circle-user fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Web</span>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+        <p class="member-specialization">{{ member.specialization }}</p>
+      </div>
     </div>
   </div>
 

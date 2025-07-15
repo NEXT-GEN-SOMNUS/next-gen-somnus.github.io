@@ -4,6 +4,77 @@ layout: page
 
 {{ content }}
 
+<hr class="hr mt-4" />
+
+<h3 class="text-center">Latest publications</h3>
+
+{% for pub in site.publications reversed limit:3 %}
+
+      <div class="p-2 mb-2 d-flex align-items-stretch">
+        <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title">{{ pub.title }}</h5>
+                  <p class="card-subtitle" style="opacity: 50%;margin-bottom: 0.5em;">[{{ pub.type }}] {{ pub.publication_site }}</p>
+                  <p class="card-subtitle">{{ pub.author }}</p>
+                </div>
+                <div class="col-2 text-center">
+                  <li class="list-inline-item">
+                    <a href="../wps/wp{{ pub.wp }}" title="Work Package {{ pub.wp }}">
+                      <span class="badge badge-pill p-3" style="background-color: currentColor;" aria-hidden="true">
+                        <i class="fas fa-w fa-inverse"></i>
+                        <i class="fas fa-p fa-inverse"></i>
+                        <i class="fas fa-{{ pub.wp }} fa-inverse"></i>
+                      </span>
+                      <span class="sr-only">Work Package {{ pub.wp }}</span>
+                    </a>
+                  </li>
+                </div>
+              </div>
+                <div class="card-text">
+                  <div class="row mt-2">
+                    <div class="col">
+                      {{ pub.description }}
+                    </div>
+                    <div class="col-2 text-center align-self-center">
+                      {% if pub.doi != null %}
+                      <li class="list-inline-item">
+                        <a href="https://doi.org/{{ pub.doi }}" title="Publication" target="_blank">
+                          <span class="fa-stack fa-lg" aria-hidden="true">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fas fa-file-lines fa-stack-1x fa-inverse"></i>
+                          </span>
+                          <span class="sr-only">Publication</span>
+                        </a>
+                      </li>
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+    {% endfor %}
+
+<div class="row" style="justify-content: center;">
+  <ul class="pagination main-pager">
+    <li class="page-item next">
+      <a class="page-link" href="./publications">
+        <span class="d-none d-sm-inline-block">All Publications</span>
+        <i class="fas fa-arrow-right" alt="All Publications"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<hr class="hr mt-4" />
+
+<div class="row justify-content-center">
+  <h3 class="">Latest news</h3>
+</div>
+
 {% assign posts = paginator.posts | default: site.posts %}
 
 <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->

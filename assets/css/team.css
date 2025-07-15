@@ -1,0 +1,24 @@
+.member-card {
+    width: 15em;
+    height: 30em;
+}
+
+.member-card .member-name {
+    height: 2em;
+}
+
+.member-card .member-position {
+    font-size: 75%;
+}
+
+.member-card .member-socials {
+    padding: 0em; margin: 0em;
+}
+
+.member-card .member-link {
+    margin: 1em;
+}
+
+.member-card .member-specialization {
+    margin: 1em 0em;
+}
