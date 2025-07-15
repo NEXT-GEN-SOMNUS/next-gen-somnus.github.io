@@ -1,6 +1,6 @@
 {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
 
-{% if page.cover-img %}
+{% if page.cover-img%}
   <div id="header-big-imgs" data-num-img={% if page.cover-img.first %}{{ page.cover-img.size }}{% else %}1{% endif %}
     {% for bigimg in page.cover-img %}
     {% assign imgnum = forloop.index %}
@@ -16,9 +16,9 @@
   ></div>
 {% endif %}
 
-<header class="header-section {% if page.cover-img %}has-img{% endif %}">
-<div class="intro-header {% if page.cover-img %} big-img {% endif %}">
-  {% if page.cover-img or page.title %}
+<header class="header-section {% if page.cover-img or page.cover-vid %}has-img{% endif %}">
+<div class="intro-header {% if page.cover-img or page.cover-vid  %} big-img {% endif %}">
+  {% if page.cover-img or page.cover-vid or page.title %}
   <div class="container-md">
     <div class="row">
       <div class="col-xl-12 offset-xl-0 col-lg-10 offset-lg-1">
@@ -54,6 +54,9 @@
   </div>
   {% endif %}
   {% if page.cover-img %}<span class='img-desc'></span>{% endif %}
+  {% if page.cover-vid %}
+    <video autoplay muted loop src="{{ page.cover-vid }}"></video>
+  {% endif %}
 </div>
 
 {% if page.header-extra %}
