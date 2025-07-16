@@ -10,6 +10,10 @@ header video {
   filter: blur(2px);
 }
 
+.header-vid {
+  height: 40vh;
+}
+
 .carousel-img {
   filter: brightness(55%);
   transition: all .5s;

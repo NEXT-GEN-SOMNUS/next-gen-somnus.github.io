@@ -10,55 +10,45 @@ layout: page
 
 {% for pub in site.publications reversed limit:3 %}
 
-      <div class="p-2 mb-2 d-flex align-items-stretch">
-        <div class="card">
-            <div class="card-body">
-              <div class="row">
-                <div class="col">
-                  <h5 class="card-title">{{ pub.title }}</h5>
-                  <p class="card-subtitle" style="opacity: 50%;margin-bottom: 0.5em;">[{{ pub.type }}] {{ pub.publication_site }}</p>
-                  <p class="card-subtitle">{{ pub.author }}</p>
-                </div>
-                <div class="col-2 text-center">
-                  <li class="list-inline-item">
-                    <a href="../wps/wp{{ pub.wp }}" title="Work Package {{ pub.wp }}">
-                      <span class="badge badge-pill p-3" style="background-color: currentColor;" aria-hidden="true">
-                        <i class="fas fa-w fa-inverse"></i>
-                        <i class="fas fa-p fa-inverse"></i>
-                        <i class="fas fa-{{ pub.wp }} fa-inverse"></i>
-                      </span>
-                      <span class="sr-only">Work Package {{ pub.wp }}</span>
-                    </a>
-                  </li>
-                </div>
-              </div>
-                <div class="card-text">
-                  <div class="row mt-2">
-                    <div class="col">
-                      {{ pub.description }}
-                    </div>
-                    <div class="col-2 text-center align-self-center">
-                      {% if pub.doi != null %}
-                      <li class="list-inline-item">
-                        <a href="https://doi.org/{{ pub.doi }}" title="Publication" target="_blank">
-                          <span class="fa-stack fa-lg" aria-hidden="true">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fas fa-file-lines fa-stack-1x fa-inverse"></i>
-                          </span>
-                          <span class="sr-only">Publication</span>
-                        </a>
-                      </li>
-                      {% endif %}
-                    </div>
-                  </div>
-                </div>
-            </div>
+<div class="p-2 mb-2 d-flex align-items-stretch">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-xl col-md-0">
+          <h5 class="card-title">{{ pub.title }}</h5>
+          <p class="card-subtitle" style="opacity: 50%; margin-bottom: 0.5em">
+            [{{ pub.type }}] {{ pub.publication_site }}
+          </p>
+          <p class="card-subtitle">{{ pub.author }}</p>
+          <div class="card-text mt-2">
+            {{ pub.description }}
+          </div>
         </div>
+        {% if pub.doi != null %}
+        <div class="col-xl-2 col-md-0 text-center mt-3 align-self-center">
+          <li class="list-inline-item">
+            <a
+              href="https://doi.org/{{ pub.doi }}"
+              title="Publication"
+              target="_blank"
+            >
+              <span class="fa-stack fa-lg" aria-hidden="true">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-file-lines fa-stack-1x fa-inverse"></i>
+              </span>
+              <span class="sr-only">Publication</span>
+            </a>
+          </li>
+        </div>
+        {% endif %}
       </div>
+    </div>
+  </div>
+</div>
 
-    {% endfor %}
+{% endfor %}
 
-<div class="row" style="justify-content: center;">
+<div class="row" style="justify-content: center">
   <ul class="pagination main-pager">
     <li class="page-item next">
       <a class="page-link" href="./publications">
@@ -82,30 +72,18 @@ layout: page
   {% for post in posts limit:3 %}
   <li class="post-preview">
     <article>
-
-      {%- capture thumbnail -%}
-      {% if post.thumbnail-img %}
-      {{ post.thumbnail-img }}
-      {% elsif post.cover-img %}
-      {% if post.cover-img.first %}
-      {{ post.cover-img[0].first.first }}
-      {% else %}
-      {{ post.cover-img }}
-      {% endif %}
-      {% else %}
-      {% endif %}
-      {% endcapture %}
-      {% assign thumbnail=thumbnail | strip %}
-
-      {% if site.feed_show_excerpt == false %}
-      {% if thumbnail != "" %}
+      {%- capture thumbnail -%} {% if post.thumbnail-img %} {{
+      post.thumbnail-img }} {% elsif post.cover-img %} {% if
+      post.cover-img.first %} {{ post.cover-img[0].first.first }} {% else %} {{
+      post.cover-img }} {% endif %} {% else %} {% endif %} {% endcapture %} {%
+      assign thumbnail=thumbnail | strip %} {% if site.feed_show_excerpt ==
+      false %} {% if thumbnail != "" %}
       <div class="post-image post-image-normal">
         <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-          <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
+          <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail" />
         </a>
       </div>
-      {% endif %}
-      {% endif %}
+      {% endif %} {% endif %}
 
       <a href="{{ post.url | absolute_url }}">
         <h4 class="post-title">{{ post.title | strip_html }}</h4>
@@ -121,33 +99,33 @@ layout: page
       <span>By <strong>{{ post.author | strip_html }}</strong></span>
       {% endif %} -->
       <p class="post-meta">
-        {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
-        {{ post.date | date: date_format }}
+        {% assign date_format = site.date_format | default: "%B %-d, %Y" %} {{
+        post.date | date: date_format }}
       </p>
 
       {% if thumbnail != "" %}
       <div class="post-image post-image-small">
         <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-          <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
+          <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail" />
         </a>
       </div>
-      {% endif %}
-
-      {% unless site.feed_show_excerpt == false %}
-      {% if thumbnail != "" %}
+      {% endif %} {% unless site.feed_show_excerpt == false %} {% if thumbnail
+      != "" %}
       <div class="post-image post-image-short">
         <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-          <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
+          <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail" />
         </a>
       </div>
       {% endif %}
 
       <div class="post-entry">
-        {% assign excerpt_length = site.excerpt_length | default: 50 %}
-        {{ post.excerpt | strip_html | truncatewords: excerpt_length }}
-        {% assign excerpt_word_count = post.excerpt | number_of_words %}
-        {% if post.content != post.excerpt or excerpt_word_count > excerpt_length %}
-        <a href="{{ post.url | absolute_url }}" class="post-read-more">[Read&nbsp;More]</a>
+        {% assign excerpt_length = site.excerpt_length | default: 50 %} {{
+        post.excerpt | strip_html | truncatewords: excerpt_length }} {% assign
+        excerpt_word_count = post.excerpt | number_of_words %} {% if
+        post.content != post.excerpt or excerpt_word_count > excerpt_length %}
+        <a href="{{ post.url | absolute_url }}" class="post-read-more"
+          >[Read&nbsp;More]</a
+        >
         {% endif %}
       </div>
       {% endunless %}
@@ -167,13 +145,12 @@ layout: page
         </div>
         {% endif %}
       -->
-
     </article>
   </li>
   {% endfor %}
 </ul>
 
-<div class="row" style="justify-content: center;">
+<div class="row" style="justify-content: center">
   <ul class="pagination main-pager">
     <li class="page-item next">
       <a class="page-link" href="./news">
