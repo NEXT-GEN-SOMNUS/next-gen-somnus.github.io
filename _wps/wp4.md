@@ -67,6 +67,9 @@ image_path: /assets/img/wp/wp_4.png
  
 </style>
  
+This WP investigates the applicability of quantum machine learning (QML) to biomedical signal processing, trying to use the quantum properties to obtain a better understanding of complex correlations in high-dimensional data. This process will be carried out in parallel with the previous WPs dedicated to next-generation ML algorithms, searching for synergies between them.
+
+
 <div class="wp-simple-path-container">
   <div class="wp-path-step">
     <h5>QML applicability and data encoding</h5>
@@ -86,7 +89,7 @@ image_path: /assets/img/wp/wp_4.png
   </div>
 </div>
  
-<div class="row align-items-center">
+<!-- <div class="row align-items-center">
   <div class="col">
     <div class="card text-center">
       <div class="card-body">
@@ -167,7 +170,5 @@ image_path: /assets/img/wp/wp_4.png
       </div>
     </div>
   </div>
-</div>
+</div> -->
  
- 
-This WP investigates the applicability of quantum machine learning (QML) to biomedical signal processing, trying to use the quantum properties to obtain a better understanding of complex correlations in high-dimensional data. This process will be carried out in parallel with the previous WPs dedicated to next-generation ML algorithms, searching for synergies between them.

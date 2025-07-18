@@ -8,7 +8,9 @@ layout: page
 
 <h3 class="text-center">Latest publications</h3>
 
-{% for pub in site.publications reversed limit:3 %}
+{% assign reversed_pubs = site.publications | reverse %}
+
+{% for pub in reversed_pubs limit:3 %}
 
 <div class="p-2 mb-2 d-flex align-items-stretch">
   <div class="card">

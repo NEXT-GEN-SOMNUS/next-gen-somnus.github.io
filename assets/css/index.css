@@ -7,11 +7,18 @@ header video {
   width: 100%;
   height: 100%;
   transform: translateX(-50%) translateY(-50%);
-  filter: blur(2px);
+  filter: blur(5px);
 }
 
 .header-vid {
   height: 40vh;
+}
+
+header .video-wrapper {
+  height: 40vh;
+  width: 100%;
+  overflow: hidden;
+  transform: scaleY(1.01);
 }
 
 .carousel-img {
