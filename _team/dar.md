@@ -2,7 +2,7 @@
 layout: member
 name: David Alonso Ríos
 position: Research team
-specialization: Human-in-the-loop  
+specialization: Human-In-The-Loop  
 image_path: /assets/img/team/david_alonso.png
-bio:
+email: david.alonso@udc.es
 ---

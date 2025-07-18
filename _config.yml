@@ -36,7 +36,8 @@ navbar-links:
   About: "about"
   Work Packages: "wps"
   Team: "team"
-  # News: "news"
+  News: "news"
+  Publications: "publications"
   # GitHub: "https://github.com/ngs-test-org"
 
 ################
@@ -60,9 +61,11 @@ title-img: "/assets/img/logo-512x512.png"
 
 collections:
   team:
-    output: true
+    output: false
   wps:
     output: true
+  publications:
+    output: false
 
 #####################################
 # --- Footer social media links --- #
@@ -131,7 +134,7 @@ share-links-active:
 title-on-all-pages: true
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
-excerpt_length: 30
+excerpt_length: 50
 
 # Whether or not to show an excerpt for every blog post in the feed page
 feed_show_excerpt: true
@@ -288,6 +291,7 @@ markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
 paginate: 5
+paginate_path: "/news/page:num/"
 
 kramdown:
   input: GFM

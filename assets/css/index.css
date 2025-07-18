@@ -1,3 +1,26 @@
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%) translateY(-50%);
+  filter: blur(5px);
+}
+
+.header-vid {
+  height: 40vh;
+}
+
+header .video-wrapper {
+  height: 40vh;
+  width: 100%;
+  overflow: hidden;
+  transform: scaleY(1.01);
+}
+
 .carousel-img {
   filter: brightness(55%);
   transition: all .5s;
