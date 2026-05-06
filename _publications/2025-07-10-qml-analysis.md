@@ -6,6 +6,6 @@ description: This study explores the performance of Quantum Support Vector Class
 wp: 4
 type: Conference 
 publication_site: International Joint Conference on Neural Networks 2025
-doi:
+doi: 10.48550/arXiv.2512.03094
 github:
 ---
