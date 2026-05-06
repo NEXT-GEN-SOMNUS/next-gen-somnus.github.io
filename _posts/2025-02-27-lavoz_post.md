@@ -16,4 +16,4 @@ In collaboration with CESGA, the project focuses on designing advanced machine l
 The research employs both empirical sleep data and simulations on quantum hardware and emulators to validate the models. By overcoming the limitations of conventional diagnostic methods—which are often labor-intensive and costly—this initiative seeks to accelerate and improve diagnostic processes. Additionally, expert clinical knowledge is incorporated to enhance model precision and interpretability.
 
 
-<a href="https://www.lavozdegalicia.es/noticia/sociedad/2025/02/27/computacion-cuantica-inteligencia-artificial-trastornos-sueno/00031740656564671822506.htm">Reference</a>  
+<a href="https://www.lavozdegalicia.es/noticia/sociedad/2025/02/27/computacion-cuantica-inteligencia-artificial-trastornos-sueno/00031740656564671822506.htm" target="_blank">Reference</a>  
