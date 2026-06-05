@@ -16,4 +16,4 @@ The project's primary goal is to develop more efficient, explainable solutions f
 The project aims to overcome the limitations of current diagnostic methods, which are complex, costly and not very scalable, making it challenging to meet the increasing demand. Integrating AI techniques and quantum computing will accelerate diagnosis, reduce costs, and enhance clinical efficiency, thereby benefiting over four million individuals in Spain suffering from sleep disorders.
 
 
-<a href="https://www.gciencia.com/conece-citic/problemas-de-sono-un-proxecto-galego-usa-ia-e-computacion-cuantica-para-a-sua-diagnose/">Reference</a>  
+<a href="https://www.gciencia.com/conece-citic/problemas-de-sono-un-proxecto-galego-usa-ia-e-computacion-cuantica-para-a-sua-diagnose/" target="_blank">Reference</a>  

@@ -13,6 +13,6 @@ CITIC has recruited new researchers to drive forward projects applying artificia
 
 Coordinated by researchers Eduardo Mosqueira Rey and Diego Álvarez Estévez within the framework of the 2023 State Call for Projects for the Generation of Knowledge, the project will use real data and test the models in both, simulators and CESGA's real quantum computer. This initiative aims to overcome the limitations of current computer-aided diagnosis systems by improving their explainability, performance, and generalisation capacity in response to the growing demand arising from the significant number of individuals affected by sleep disorders in Spain.
 
-<a href="https://codigocero.com/O-CESGA-xunta-forzas-co-CITIC-para-combater-con-IA-e-computacion-cuantica-os">Reference</a>  
+<a href="https://codigocero.com/O-CESGA-xunta-forzas-co-CITIC-para-combater-con-IA-e-computacion-cuantica-os" target="_blank">Reference</a>  
 
 
