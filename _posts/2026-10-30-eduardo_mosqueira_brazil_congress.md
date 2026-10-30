@@ -15,8 +15,6 @@ The course covered fundamental quantum computing concepts, including superpositi
 
 In addition to his teaching activities, Eduardo Mosqueira joined a panel discussion on workforce development, addressing the challenges of training professionals for the growing quantum technology sector.
 
-Through its research and training activities, CITIC recognizes the importance of preparing professionals with interdisciplinary skills in quantum computing, artificial intelligence, machine learning, and programming to support the development of this emerging field.
-
 
 
 <a href="https://citic.udc.es/next_gen_somnus_participation_in_IX_edition_of_XoveTIC_congress/" target="_blank">Reference</a>
